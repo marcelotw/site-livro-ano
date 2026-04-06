@@ -43,14 +43,42 @@
 })();
 
 
+// === Mobile menu toggle ===
+(function initMobileMenu() {
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+
+  const toggleMenu = () => {
+    const isActive = toggle.classList.toggle('is-active');
+    links.classList.toggle('is-active');
+    toggle.setAttribute('aria-expanded', isActive);
+    document.body.style.overflow = isActive ? 'hidden' : '';
+  };
+
+  toggle.addEventListener('click', toggleMenu);
+
+  // Close menu when clicking a link
+  links.querySelectorAll('.nav__link').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (links.classList.contains('is-active')) {
+        toggleMenu();
+      }
+    });
+  });
+})();
+
+
 // === Smooth anchor links ===
 (function initSmoothLinks() {
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
       const targetId = link.getAttribute('href').slice(1);
-      if (!targetId) return;
+      if (!targetId || targetId === 'inicio') return;
+      
       const target = document.getElementById(targetId);
       if (!target) return;
+      
       e.preventDefault();
       const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
       const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;

@@ -28,13 +28,21 @@
         <span class="logo-icon">📖</span>
         <span>Clube do Livro</span>
       </a>
-      <nav aria-label="Menu principal">
+      <nav class="nav__links" id="nav-links" aria-label="Menu principal">
         <a href="#funcionalidades" class="nav__link">Funcionalidades</a>
         <a href="#como-funciona" class="nav__link">Como funciona</a>
         <a href="#preco" class="nav__link">Preço</a>
         <a href="#faq" class="nav__link">FAQ</a>
+        <a href="#preco" class="btn btn--primary btn--sm nav__mobile-btn">Começar agora</a>
       </nav>
-      <a href="#preco" class="btn btn--primary btn--sm">Começar agora</a>
+      <div class="nav__actions">
+        <a href="#preco" class="btn btn--primary btn--sm nav__cta">Começar agora</a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -295,7 +303,8 @@
         <div class="results__inner">
           <div class="results__text animate-fade-up">
             <span class="badge">✦ O resultado</span>
-            <h2 id="results-title" class="section__title">O resultado no seu clube</h2>
+            <h2 id="results-title" class="section__title">O resultado no <span class="text-gradient-yellow">seu
+                clube</span></h2>
             <p class="results__desc">Líderes que usam a plataforma relatam uma transformação completa na dinâmica do
               Clube do Livro.</p>
           </div>
@@ -344,7 +353,8 @@
           </div>
           <div class="app-preview__text animate-fade-up">
             <span class="badge">✦ Ranking por Unidade</span>
-            <h2 id="ranking-preview-title" class="section__title">Competição saudável que motiva toda a unidade</h2>
+            <h2 id="ranking-preview-title" class="section__title">Competição saudável que <span
+                class="text-gradient-yellow">motiva toda a unidade</span></h2>
             <p class="app-preview__desc">
               O ranking por unidade cria uma dinâmica de grupo poderosa: cada desbravador contribui para a posição da
               sua unidade. Todos têm razão para participar.
@@ -376,7 +386,7 @@
               <span class="price-value">0</span>
             </div>
             <p class="pricing-card__note">Nenhum investimento inicial</p>
-            <p class="pricing-card__equiv">Plano gratuito para testar o app<br /><br />
+            <p class="pricing-card__equiv">Plano gratuito para testar<br /><br />
             </p>
             <ul class="pricing-card__features">
               <li>✅ Trilha do Capítulo 1</li>
@@ -385,6 +395,7 @@
               <li>✅ Acesso via celular, sem instalar</li>
               <li>✅ Assinatura dentro da plataforma</li>
             </ul>
+            <br /><br /><br /><br /><br />
             <a href="https://clubedolivro.online/create-account" class="btn btn--outline btn--lg btn--full"
               target="_blank" rel="noopener noreferrer">
               Começar Gratuitamente →
@@ -395,6 +406,9 @@
           <div class="pricing-card pricing-card--pro animate-fade-up">
             <div class="pricing-card__badge">Oferta de lançamento</div>
             <h3 class="pricing-card__name">Plano PRO</h3>
+            <div class="pricing-card__anchor">
+              de <del>R$ 99</del> por apenas
+            </div>
             <div class="pricing-card__price">
               <span class="price-currency">R$</span>
               <span class="price-value">49</span>
@@ -404,6 +418,7 @@
                 médio)</small></p>
             <ul class="pricing-card__features">
               <li>✅ Trilha completa de todos os capítulos</li>
+              <li>✅ Conteúdos exclusivos para o líder (slides, HQ e Quiz Kahoot)</li>
               <li>✅ Pontuação e ranking automáticos</li>
               <li>✅ Missões práticas por capítulo</li>
               <li>✅ Engajamento durante a semana</li>
@@ -440,7 +455,7 @@
           </div>
           <div class="comparison__divider" aria-hidden="true">vs</div>
           <div class="comparison__col comparison__col--after">
-            <h3 class="comparison__label">✅ Com a plataforma</h3>
+            <h3 class="comparison__label"><span class="text-gradient-yellow">✅ Com a plataforma</span></h3>
             <ul class="comparison__list">
               <li>Sistema organizado e profissional</li>
               <li>Engajamento real e mensurável</li>
@@ -473,8 +488,9 @@
           <details class="faq-item">
             <summary class="faq-item__question">Funciona no celular?</summary>
             <div class="faq-item__answer">
-              <p>Sim! A plataforma é mobile-first, ou seja, foi feita pensando principalmente no celular. Funciona
-                perfeitamente em qualquer smartphone.</p>
+              <p>Sim! A plataforma é mobile-first e responsiva, ou seja, foi feita pensando principalmente no celular.
+                Funciona
+                perfeitamente em qualquer smartphone. Você também pode acessar com o tablets e computadores.</p>
             </div>
           </details>
           <details class="faq-item">
@@ -494,14 +510,14 @@
           <details class="faq-item">
             <summary class="faq-item__question">Quando tenho acesso após o pagamento?</summary>
             <div class="faq-item__answer">
-              <p>O acesso é imediato. Após a confirmação do pagamento, você já pode criar seu clube e convidar os
-                desbravadores.</p>
+              <p>O acesso é imediato. Após a confirmação do pagamento, você terá acesso a todos os capítulos do livro,
+                além de desbloquear a funcionalidade de missões.</p>
             </div>
           </details>
           <details class="faq-item">
             <summary class="faq-item__question">Funciona para qualquer livro do ano?</summary>
             <div class="faq-item__answer">
-              <p>O conteúdo da plataforma em 2026 é construído 100% focado no livro <strong>"Servo de Deus e amigo de
+              <p>O conteúdo da plataforma em 2026 foi construído 100% focado no livro <strong>"Servo de Deus e amigo de
                   todos"</strong>. Como a assinatura é anual com acesso permanente enquanto o clube estiver ativo,
                 no próximo ano a plataforma será automaticamente atualizada com todo o conteúdo e missões para o Livro
                 do Ano de 2027.</p>
