@@ -1734,3 +1734,30 @@ details[open] .faq-item__question::after {
     animation: none;
   }
 }
+
+/* === DAILY ENGAGEMENT SECTION === */
+.daily-footer {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-weight: 700;
+}
+
+.daily-footer span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.daily-footer span:first-child {
+  color: #10b981; /* Success Green */
+}
+
+.daily-footer span:last-child {
+  color: var(--clr-accent);
+}
+
+.app-screenshot-frame--sm {
+  max-width: 420px;
+}
